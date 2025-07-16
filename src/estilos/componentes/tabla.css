@@ -1,0 +1,29 @@
+.tabla{
+    width: 100%;
+    background-color: #eceaea;
+    border-collapse: collapse;
+    border: solid 1px #a9a6a6;
+    font-size: 1.2rem;
+}
+
+.tabla__encabezado{
+    background-color: #39a900;
+    color: #fff;
+    text-align: center;
+    border-bottom: solid 2px #a1a0a0;
+}
+.tabla__encabezado th{
+    padding: 12px 0;
+    border-right: solid 1px #fff;
+}
+.tabla__encabezado th:last-child{
+    border-right: none ;
+}
+
+.tabla__fila{
+    border-bottom: solid 1px #a1a0a0;
+}
+.tabla__fila td{
+    padding: 8px 4px;
+    border-right: solid 1px #a1a0a0;
+}

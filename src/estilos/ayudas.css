@@ -1,0 +1,19 @@
+.d-flex{
+    display: flex;
+}
+.gap-8{
+    gap: 8px;
+}
+.justificado-espacio-entre{
+    justify-content: space-between;
+}
+.justicado-centrado{
+    justify-content: center;
+}
+
+.pb-10{
+    padding-bottom: 10px;
+}
+.pt-10{
+    padding-top: 10px;
+}

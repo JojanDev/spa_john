@@ -1,0 +1,17 @@
+.boton{
+    display: block;
+    background-color: #39a900;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+}
+
+.boton--full{
+    width: 100%;
+}
+
+.boton--rojo{
+    background-color: #cd1c04;
+}
