@@ -1,7 +1,7 @@
 import { routers } from "./routers";
 
 export const router = (elemento) => {
-  const hast = location.hash.slice(1);
+  const hast = location.hash.slice(2);
   const ruta = recorrerRutas(routers, hast);
   cargarVista(ruta.path, elemento);
   // ruta.controller();
@@ -9,12 +9,15 @@ export const router = (elemento) => {
 
 const recorrerRutas = (routers, hast) => {
   // console.log(hast);
-  // console.log(hast.split("/").length);
-  for (const key in routers) {
-    let hash = hast.split("/");
+  // console.log(hast.split("/").slice(1));
 
+  //Convierte el hast a un array separado por los /, eliminando la primera posicion que es una cadena vacia
+  let hash = hast.split("/")                            ;
+
+  //Recorre las claves del objeto routers
+  for (const key in routers) {
     //Si la clave y el hash no coinciden se salta a la siguiente iteracion
-    if (key != hash[1]) continue;
+    if (key != hash[0]) continue;
 
     //Codigo si coincide el hash:
 
@@ -25,11 +28,11 @@ const recorrerRutas = (routers, hast) => {
 
       //Codigo si la propiedad es un objeto:
 
-      //Listar (hash = Array del hash separado por /, si tiene 2 posiciones es listar)
-      if (hash.length == 2) return routers[key][elemento];
+      //Listar (hash = Array del hash separado por /, si tiene 1 posicion es listar)
+      if (hash.length == 1) return routers[key][elemento];
 
-      //Resto del crud dinamico, hash[2] contiene la cadena de la accion ["",categorias, crear] (crear == crear)
-      if (elemento == hash[2]) return routers[key][elemento];
+      //Resto del crud dinamico, hash[1] contiene la cadena de la accion [categorias, crear] (crear == crear)
+      if (elemento == hash[1]) return routers[key][elemento];
     }
   }
   return "";
