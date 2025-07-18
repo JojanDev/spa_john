@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "remixicon": "^4.6.0",
+    "sweetalert2": "^11.22.2"
   }
 }

@@ -1,4 +1,6 @@
 import { categoriaController } from "../views/categories/categoriasController";
+import crearController from "../views/categories/create/crearController.js";
+import editarController from "../views/categories/edit/editarController.js";
 import { homeController } from "../views/home/homeController";
 import { loginController } from "../views/login/loginController.js";
 import { productController } from "../views/products/productController.js";
@@ -17,13 +19,13 @@ export const routers = {
       private: false,
     },
     crear: {
-      path: "categories/crear.html",
-      controller: categoriaController,
+      path: "categories/create/index.html",
+      controller: crearController,
       private: false,
     },
     editar: {
-      path: "categories/editar.html",
-      controller: categoriaController,
+      path: "categories/edit/index.html",
+      controller: editarController,
       private: false,
     },
   },
